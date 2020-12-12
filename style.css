@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+.content{
+	width: calc(100% - 240px);
+	float: right;
+	transition: 1s;
+	transition-property: width;
+}
+.cal_header{
+	font-size: 35px;
+	font-style: italic;
+	padding: 30px;
+	font-weight: 900;
+	margin-bottom: 15px;
+}
+.left{
+	width: 49%;
+	float: left;
+}
+.right{
+	width: 80%;
+	margin-left:10%; 
+}
+.input{
+	width: 49%;
+	height: 40px;
+	font-style: italic;
+	font-size: 25px;
+	font-weight: 900;
+	cursor: pointer;
+}
+.inputMonth{
+
+}
+.inputYear{
+
+}
+.Ndays{
+	display: grid;
+  	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  	margin-right: 10px;
+  	margin-left: 10px;
+}
+.Ndays>p{
+	text-align: center;
+	border:2px solid black;
+	font-style: oblique;
+	font-weight: 400;
+	font-size: 20px;
+	background-color: #DDD;
+	width: 1fr;
+}
+
+.days{
+	display: grid;
+  	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  	margin-right: 10px;
+  	margin-right: 10px;
+  	margin-left: 10px;
+}
+.days>div{
+	text-align: center;
+	border:2px solid black;
+	font-style: oblique;
+	height: 90px;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.semaine{
+	display: grid;
+  	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.semaine>div{
+	text-align: center;
+	border-right:2px solid black;
+	font-style: oblique;
+	font-weight: 400;
+	width: 1fr;
+	padding-top: 17px;
+	font-size: 20px;
+	background-color: #1776;
+}
+.occuped{
+	color: red;
+}
+@media screen and (max-width: 804px){
+	.barside{
+		position: fixed;
+		top:50px;
+		left: -320px;
+		margin-left:-320px;
+		transition: 1s;
+		transition-property: left;
+		box-shadow: 60px 60px 1000px black;
+	}
+	.input{
+		width: 100%;
+	}
+	.content{
+		width: 100%;
+	}
+	#menu:checked~.barside{
+		left:320px;
+	}
+	#menu:checked~.content{
+		width: 100%;
+	}
+}
